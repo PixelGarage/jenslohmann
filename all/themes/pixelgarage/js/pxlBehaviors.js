@@ -35,14 +35,26 @@
 
       // click on play / pause button
       $controls.once('click', function () {
+        // set music play according to flag
+        if (sessionStorage.isMuted == 'true') {
+          audio.pause();
+          $toggleImg.attr('src', imgUrl.replace('sound_on', 'sound_off'));
+        } else {
+          audio.play();
+          $toggleImg.attr('src', imgUrl.replace('sound_off', 'sound_on'));
+        }
+
+        // controls event
         $controls.on('click', function () {
           // toggle the play button
           if (audio.paused || audio.ended) {
             audio.play();
-            $toggleImg.attr('src', imgUrl.replace('sound_on', 'sound_off'));
+            sessionStorage.isMuted = "false";
+            $toggleImg.attr('src', imgUrl.replace('sound_off', 'sound_on'));
           } else {
             audio.pause();
-            $toggleImg.attr('src', imgUrl.replace('sound_off', 'sound_on'));
+            sessionStorage.isMuted = "true";
+            $toggleImg.attr('src', imgUrl.replace('sound_on', 'sound_off'));
           }
 
           // don't propagate click event further up
