@@ -1,0 +1,58 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+// webfont licences
+
+//
+// Google fonts
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'NewBaskervilleStdRoman';
+
+// text fonts
+@pxl-text-font: 'NewBaskervilleStdRoman';
+@pxl-text-font-light: 'NewBaskervilleStdRoman';
+@pxl-text-font-medium: 'NewBaskervilleStdRoman';
+@pxl-text-font-bold: 'NewBaskervilleStdRoman';
+@pxl-text-font-italic: 'NewBaskervilleStdRoman';
+@pxl-text-font-light-italic: 'NewBaskervilleStdRoman';
+@pxl-text-font-medium-italic: 'NewBaskervilleStdRoman';
+@pxl-text-font-bold-italic: 'NewBaskervilleStdRoman';
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+// overrides
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// overrides
+@font-family-base: @pxl-text-font;
+
+//
+// font faces
+//
+@font-face {
+  font-family: 'NewBaskervilleStdRoman';
+  src: url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.eot');
+  src: url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.woff2') format('woff2'),
+  url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.woff') format('woff'),
+  url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.ttf') format('truetype'),
+  url('@{pxl-font-path}/NewBaskervilleStdRoman/NewBaskervilleStdRoman.svg#NewBaskervilleStdRoman') format('svg');
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NewBaskervilleStdRoman';
+    src: url('fonts/NewBaskervilleStdRoman.eot');
+    src: url('fonts/NewBaskervilleStdRoman.eot') format('embedded-opentype'),
+         url('fonts/NewBaskervilleStdRoman.woff2') format('woff2'),
+         url('fonts/NewBaskervilleStdRoman.woff') format('woff'),
+         url('fonts/NewBaskervilleStdRoman.ttf') format('truetype'),
+         url('fonts/NewBaskervilleStdRoman.svg#NewBaskervilleStdRoman') format('svg');
+}

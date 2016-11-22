@@ -1,0 +1,36 @@
+/*
+ *  Node note component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-note.view-mode-full {
+  margin: 30px 0;
+
+  >.row {
+    >div.col-sm-12 {
+      width: 100%;
+
+      >.field-name-title {
+        h2 {
+          .paragraph-title();
+        }
+      }
+
+      >.field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body(16px);
+      }
+
+    }
+  }
+}

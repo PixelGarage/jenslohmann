@@ -1,0 +1,168 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@z-index-controls: 100;
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+body.navbar-is-fixed-bottom {
+  padding-bottom: 70px !important;
+
+  &.admin-menu {
+    padding-bottom: 70px !important;
+  }
+
+}
+
+
+header#navbar {
+  border-top: 2px solid black;
+  background: transparent none;
+
+  .front & {
+    border: none;
+  }
+
+  .container, .container-fluid {
+    position: relative;
+    padding: 5px 0;
+
+    #sound-wrapper {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      right: auto;
+      width: 10%;
+      z-index: @z-index-controls;
+
+      @media @menu-break {
+        left: auto;
+        right: 0;
+      }
+
+      #sound-controls {
+        cursor: pointer;
+
+        .sound-title-wrapper {
+          display: none;
+          vertical-align: middle;
+          font-family: @pxl-text-font;
+          font-size: @font-size-small;
+          text-align: right;
+
+          .sound-artist {
+            text-transform: uppercase;
+            text-align: right;
+          }
+        }
+
+        button#toggle-sound {
+          margin: 0 auto;
+          border: none;
+          outline: none;
+          background: none;
+
+          img {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+
+    .navbar-header {
+      // header (branding)
+      a.logo {
+        display: none;
+      }
+
+      a.navbar-brand {
+        display: none;
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        padding: 5px 10px;
+      }
+    }
+
+    // collapse part
+    .navbar-collapse {
+      // main menu
+      nav {
+        ul.navbar-nav {
+          margin: 0;
+          width: 100%;
+
+          li {
+            display: inline-block;
+            margin: 0 -2px;
+            width: 18%;
+
+            a {
+              overflow: hidden;
+              text-indent: 100%;
+              height: 60px;
+              width: 130px;
+              margin: 0 auto;
+              padding: 0;
+              line-height: 1;
+
+              &.menu-link-experience {
+                background: @pxl-color-background url(../images/erleben.png) no-repeat top left/cover;
+
+                &:hover,
+                &.active {
+                  background-image: url(../images/erleben-aktiv.png);
+                }
+              }
+              &.menu-link-play {
+                background: @pxl-color-background url(../images/geigen.png) no-repeat top left/cover;
+
+                &:hover,
+                &.active {
+                  background-image: url(../images/geigen-aktiv.png);
+                }
+              }
+              &.menu-link-teaching {
+                background: @pxl-color-background url(../images/lehren.png) no-repeat top left/cover;
+
+                &:hover,
+                &.active {
+                  background-image: url(../images/lehren-aktiv.png);
+                }
+              }
+              &.menu-link-music {
+                background: @pxl-color-background url(../images/musik.png) no-repeat top left/cover;
+
+                &:hover,
+                &.active {
+                  background-image: url(../images/musik-aktiv.png);
+                }
+              }
+              &.menu-link-notes {
+                background: @pxl-color-background url(../images/notizen.png) no-repeat top left/cover;
+
+                &:hover,
+                &.active {
+                  background-image: url(../images/notizen-aktiv.png);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
