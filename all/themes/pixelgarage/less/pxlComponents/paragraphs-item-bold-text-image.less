@@ -1,0 +1,46 @@
+/*
+ *  Text-image paragraph component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// Component
+// -------------------------
+.entity-paragraphs-item.paragraphs-item-bold-text-with-images {
+  .row {
+    .col-sm-6 {
+      padding-top: 20px;
+
+      .field-name-field-title {
+        .field-item {
+          .paragraph-title();
+        }
+      }
+
+      .field-name-field-text {
+        .field-item {
+          #pxl-mixins.wysiwyg-body(@resp-title-size-max, @resp-title-size-min);
+          p, tbody td, a, pre, address, strong {
+            #pxl-mixins.font-size-responsive(@resp-title-size-max, @resp-title-size-min, @resp-title-size-med);
+          }
+
+        }
+      }
+
+      .field-name-field-images {
+        .field-item {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

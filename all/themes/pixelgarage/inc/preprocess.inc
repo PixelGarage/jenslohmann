@@ -60,3 +60,22 @@ function pixelgarage_preprocess_page(&$vars) {
   $vars['sound_artist'] = $sound_artist;
 }
 
+/**
+ * Several adaptations to node content.
+ */
+function pixelgarage_preprocess_node(&$vars) {
+  $type = $vars['type'];
+  if ($type == 'album') {
+    // create all needed image styles for the project images
+    foreach ($vars['field_image'] as $i => $image) {
+      $style_name = 'cover_bw';
+      $dest = image_style_path($style_name, $image['uri']);
+      if (!file_exists($dest)) {
+        $style = image_style_load($style_name);
+        if (isset($style['effects'])) image_style_create_derivative($style, $image['uri'], $dest);
+      }
+    }
+  }
+
+}
+

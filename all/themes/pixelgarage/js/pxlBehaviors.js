@@ -24,6 +24,28 @@
   };
 
   /**
+   * Swaps images from colored to black/white on mouse hover.
+   */
+  Drupal.behaviors.hoverImageSwap = {
+    attach: function () {
+      $('.node-album.view-mode-teaser').hover(
+        function () {
+          // mouse enter
+          var $img = $(this).find('.field-name-field-image img'),
+              src = $img.attr('src').replace('/cover/', '/cover_bw/');
+          $img.attr('src', src);
+        },
+        function () {
+          // mouse leave
+          var $img = $(this).find('.field-name-field-image img'),
+            src = $img.attr('src').replace('/cover_bw/', '/cover/');
+          $img.attr('src', src);
+        }
+      );
+    }
+  }
+
+  /**
    * Audio controller toggle button.
    */
   Drupal.behaviors.audioController = {
@@ -31,7 +53,7 @@
       var audio = document.getElementById('background-sound'), // element needed, not jquery object
         $controls = $(document).find('#sound-controls'),
         $toggleImg = $controls.find('img.sound-play'),
-        imgUrl     = $toggleImg.attr('src');
+        imgUrl = $toggleImg.attr('src');
 
       // click on play / pause button
       $controls.once('click', function () {
@@ -69,9 +91,9 @@
    * Anchor menus: Scrolls smoothly to anchor due to menu click.
    */
   Drupal.behaviors.smoothScrolltoAnchors = {
-    attach: function(context, settings) {
-      $(function() {
-        $('.menu li.leaf a').click(function() {
+    attach: function (context, settings) {
+      $(function () {
+        $('.menu li.leaf a').click(function () {
           var anchorPos = this.href.indexOf('#');
           // no anchor available, perform click
           if (anchorPos == -1) return true;

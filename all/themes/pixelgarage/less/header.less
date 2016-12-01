@@ -34,7 +34,7 @@ header#navbar {
 
   .container, .container-fluid {
     position: relative;
-    padding: 5px 0;
+    padding: 5px @grid-gutter-width/2;
 
     #sound-wrapper {
       position: absolute;
@@ -67,13 +67,14 @@ header#navbar {
 
         button#toggle-sound {
           margin: 0 auto;
+          padding: 0 @grid-gutter-width/2;
           border: none;
           outline: none;
           background: none;
 
           img {
             height: 40px;
-            width: 40px;
+            width: auto;
           }
         }
       }
@@ -91,7 +92,24 @@ header#navbar {
 
       .navbar-toggle {
         // navbar toggle with burger
-        padding: 5px 10px;
+        margin: 15px  @grid-gutter-width/2 16px;
+        padding: 0;
+        border: none;
+        background: none;
+
+        .icon-bar {
+          margin: 5px;
+          height: 3px;
+          width: 28px;
+          border-radius: 0;
+          background-color: @text-color;
+        }
+
+        &:hover {
+          .icon-bar {
+            background-color: @link-hover-color;
+          }
+        }
       }
     }
 
