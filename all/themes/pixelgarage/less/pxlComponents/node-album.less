@@ -142,3 +142,119 @@
   }
 }
 
+.node.node-album.view-mode-full,
+.node.node-album.view-mode-default {
+  margin: 0;
+
+  >.row {
+    >div.col-sm-6 {
+      >.field-name-field-image {
+        .field-item {
+          img {
+            display: block;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      >.field-name-title {
+        h2 {
+          margin: 0 0 10px;
+          font-family: @pxl-text-font;
+          #pxl-mixins.font-size-responsive(@resp-title-size-max, @resp-title-size-min);
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          line-height: 1.2;
+          color: @text-color;
+        }
+      }
+
+      >.field-name-field-subtitle {
+        .field-item {
+          margin: 10px 0;
+          font-family: @pxl-text-font;
+          font-size: @resp-font-size-max;
+          letter-spacing: 0.02em;
+          line-height: 1;
+          color: @text-color;
+        }
+      }
+
+      >.field-name-field-artist {
+        .field-label {
+          display: inline-block;
+          font-family: @pxl-text-font;
+          font-weight: 700;
+          font-size: @resp-font-size-max;
+        }
+
+        .field-items {
+          display: inline-block;
+
+          .field-item {
+            font-family: @pxl-text-font;
+            font-size: @resp-font-size-max;
+          }
+        }
+      }
+
+      >.field-name-field-publisher {
+        .field-label {
+          display: inline-block;
+          font-family: @pxl-text-font;
+          font-weight: 700;
+          font-size: @resp-font-size-max;
+        }
+
+        .field-items {
+          display: inline-block;
+
+          .field-item {
+            font-family: @pxl-text-font;
+            font-size: @resp-font-size-max;
+          }
+        }
+      }
+
+      >.field-name-field-published {
+        .field-label {
+          display: inline-block;
+          font-family: @pxl-text-font;
+          font-weight: 700;
+          font-size: @resp-font-size-max;
+        }
+
+        .field-items {
+          display: inline-block;
+
+          .field-item {
+            font-family: @pxl-text-font;
+            font-size: @resp-font-size-max;
+          }
+        }
+      }
+    }
+
+    >div.col-sm-12 {
+      >.field-name-body {
+        margin: 30px 0;
+        #pxl-mixins.wysiwyg-body(@resp-font-size-max, @resp-font-size-min);
+      }
+
+      >.field-name-field-soundcloud {
+        .field-item {
+          iframe {
+
+          }
+        }
+      }
+
+    }
+  }
+}
+

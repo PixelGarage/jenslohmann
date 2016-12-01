@@ -1,11 +1,10 @@
 /*
- *  Proximity view component
+ *  Notes view component
  * --------------------------------------------------*/
 
 // Variables
 // -------------------------
-@grid-gutter-dist: 3%;  // in %
-@grid-row-height: 250px;
+@grid-gutter-dist: 2%;  // in %
 
 
 // Mixins
@@ -15,8 +14,8 @@
 
 // General settings
 // -------------------------
-.view.view-music-albums {
-  margin: 50px auto 70px;
+.view.view-notes {
+  margin: 50px auto 100px;
   width: 100%;
 
   .view-content {
@@ -36,7 +35,6 @@
       @media @tablet {
         .grid-sizer, .pe-item {
           width: (50% - @grid-gutter-dist/2);
-          height: @grid-row-height;
         }
 
         .gutter-sizer {
@@ -44,24 +42,19 @@
         }
       }
 
+      @media @normal {
+        .grid-sizer, .pe-item {
+          width: (33.333333% - 2*@grid-gutter-dist/3);
+        }
+      }
+
       .pe-item {
         display: inline-block;
         overflow: hidden;
-        vertical-align: top;
-        margin: 0 0 @grid-gutter-dist !important;
+        margin: 0 0 2*@grid-gutter-dist !important;
         opacity: 1.0;
         #pxl-mixins.transition(opacity 1s);
-        border-top: 2px solid black;
-
-        &.pe-item-0 {
-          border: none;
-        }
-
-        @media @tablet {
-          &.pe-item-1 {
-            border: none;
-          }
-        }
+        background-color: #fff;
 
         &.shown {
           opacity: 1.0;
@@ -120,18 +113,18 @@
     .pager__item {
       a {
         display: inline-block;
-        padding: 8px 20px 10px;
+        padding: 8px 20px 6px;
         font-family: @pxl-text-font;
-        font-size: 16px;
+        font-size: @font-size-base;
         line-height: 1;
         color: @text-color;
         #pxl-mixins.border-radius(3px);
         border: 1px solid @text-color;
         background-color: #fff;
+        opacity: 1.0;
 
         &:hover, &.active {
-          color: #fff;
-          background-color: @text-color;
+          opacity: 0.7;
         }
       }
     }

@@ -1,0 +1,62 @@
+/*
+ *  Node note component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-instagram {
+  margin: 0;
+
+  >.row {
+    >div.col-sm-12 {
+      padding: @grid-gutter-width/2 @grid-gutter-width;
+      width: 100%;
+
+      >.field-name-title {
+        h2 {
+          .paragraph-title();
+        }
+      }
+
+      >.field-name-field-picture {
+        margin: 0 0 20px;
+
+        .field-item {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      >.field-name-field-created-time {
+        margin: 0 0 20px;
+        padding: 15px 0;
+        border-bottom: 2px solid black;
+
+        .field-item {
+          span {
+            font-family: @pxl-text-font;
+            font-weight: 700;
+            font-size: @resp-font-size-max;
+          }
+        }
+      }
+
+      >.field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body(@resp-font-size-max, @resp-font-size-min);
+      }
+
+    }
+  }
+}
