@@ -24,6 +24,45 @@
   };
 
   /**
+   * This behavior controls the height of the collapse menu height.
+   *
+   */
+  Drupal.behaviors.collapseMenuHeight = {
+    attach: function (context) {
+      // only for mobile menu
+      if ($(window).width() >= 768) return;
+
+      var $toggleButton = $('.navbar-toggle'),
+          $collapseMenu = $('#navbar-collapse'),
+          $navbarHeader = $('.navbar-header');
+
+      $toggleButton.once('init', function() {
+        //
+        // calculate menu height of menu on window resize
+        $(window).on("resize", function() {
+          var height = $(window).height() - $navbarHeader.height();
+
+          $collapseMenu.height(height);
+        });
+
+        //
+        // calculate menu height when toggled
+        $toggleButton.on('click',function() {
+          if ($collapseMenu.hasClass('open')) {
+            $collapseMenu.animate({'min-height': '0px'});
+            $collapseMenu.removeClass('open');
+          }
+          else {
+            var height = $(window).height() - $navbarHeader.height();
+            $collapseMenu.animate({'min-height': height+'px'});
+            $collapseMenu.addClass('open');
+          }
+        });
+      });
+    }
+  };
+
+  /**
    * Swaps images from colored to black/white on mouse hover.
    */
   Drupal.behaviors.hoverImageSwap = {

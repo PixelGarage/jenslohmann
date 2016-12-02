@@ -36,6 +36,10 @@ header#navbar {
     position: relative;
     padding: 5px @grid-gutter-width/2;
 
+    @media @menu-break {
+      padding: @grid-gutter-width/2;
+    }
+
     #sound-wrapper {
       position: absolute;
       top: 15px;
@@ -115,6 +119,9 @@ header#navbar {
 
     // collapse part
     .navbar-collapse {
+      max-height: 100%;
+      border:none;
+
       // main menu
       nav {
         ul.navbar-nav {
@@ -122,25 +129,25 @@ header#navbar {
           width: 100%;
 
           li {
-            display: inline-block;
-            margin: 0 -2px;
-            width: 18%;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
 
             a {
               overflow: hidden;
               text-indent: 100%;
-              height: 60px;
-              width: 130px;
+              height: 84px;
+              width: 175px;
               margin: 0 auto;
               padding: 0;
               line-height: 1;
 
               &.menu-link-experience {
-                background: @pxl-color-background url(../images/erleben.png) no-repeat top left/cover;
+                background: @pxl-color-background url(../images/leben.png) no-repeat top left/cover;
 
                 &:hover,
                 &.active {
-                  background-image: url(../images/erleben-aktiv.png);
+                  background-image: url(../images/leben-aktiv.png);
                 }
               }
               &.menu-link-play {
@@ -174,6 +181,19 @@ header#navbar {
                 &.active {
                   background-image: url(../images/notizen-aktiv.png);
                 }
+              }
+            }
+          }
+
+          @media @menu-break {
+            li {
+              display: inline-block;
+              margin: 0 -2px;
+              width: 18%;
+
+              a {
+                height: 60px;
+                width: 125px;
               }
             }
           }
