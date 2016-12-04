@@ -12651,11 +12651,11 @@ form#user-profile-form div .form-actions .form-submit .icon {
   transition: opacity 1s;
   border-top: 2px solid black;
 }
-.view.view-music-albums .view-content > .pe-container .pe-item.pe-item-0 {
+.view.view-music-albums .view-content > .pe-container .pe-item.views-row-1 {
   border: none;
 }
 @media screen and (min-width: 48em) {
-  .view.view-music-albums .view-content > .pe-container .pe-item.pe-item-1 {
+  .view.view-music-albums .view-content > .pe-container .pe-item.views-row-2 {
     border: none;
   }
 }
@@ -14356,6 +14356,7 @@ body .main-container.container .inner-container #page-header .region-header h2.b
   font-size: 27px;
 }
 body .main-container.container .inner-container .row section h1.page-header {
+  display: none;
   margin: 20px 0 10px;
   font-family: 'NewBaskervilleStdRoman';
   font-size: 46px;
