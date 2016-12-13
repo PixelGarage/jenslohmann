@@ -9,7 +9,6 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
-   */
   Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       $(window).on("scroll", function () {
@@ -22,6 +21,7 @@
       });
     }
   };
+   */
 
   /**
    * This behavior controls the height of the collapse menu height.
@@ -128,7 +128,6 @@
 
   /**
    * Anchor menus: Scrolls smoothly to anchor due to menu click.
-   */
   Drupal.behaviors.smoothScrolltoAnchors = {
     attach: function (context, settings) {
       $(function () {
@@ -151,6 +150,7 @@
       });
     }
   };
+   */
 
   /**
    * Allows full size clickable items.
@@ -167,26 +167,6 @@
       });
     }
   };
-   */
-
-  /**
-   * Swaps images from black/white to colored on mouse hover.
-   Drupal.behaviors.hoverImageSwap = {
-    attach: function () {
-      $('.node-project.node-teaser .field-name-field-images a img').hover(
-        function () {
-          // mouse enter
-          src = $(this).attr('src');
-          $(this).attr('src', src.replace('teaser_bw', 'teaser_normal'));
-        },
-        function () {
-          // mouse leave
-          src = $(this).attr('src');
-          $(this).attr('src', src.replace('teaser_normal', 'teaser_bw'));
-        }
-      );
-    }
-  }
    */
 
   /**

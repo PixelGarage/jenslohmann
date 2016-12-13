@@ -12628,7 +12628,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
  *  Proximity view component
  * --------------------------------------------------*/
 .view.view-music-albums {
-  margin: 7px auto 30px;
+  margin: 7px auto 100px;
   width: 100%;
 }
 .view.view-music-albums .view-content {
@@ -14358,7 +14358,7 @@ body {
   background: #f3f4e5 none;
 }
 body.front .main-container.container .inner-container {
-  margin: 0 -50px;
+  margin: 0;
   height: 100%;
   background: #f3f4e5 url(../images/background_image_farbig.jpg) no-repeat top left / cover;
 }
