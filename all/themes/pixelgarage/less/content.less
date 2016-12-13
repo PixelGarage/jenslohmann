@@ -48,7 +48,11 @@ body {
   background: @pxl-color-background none;
 
   &.front .main-container.container {
-    background: @pxl-color-background url(../images/background_image_farbig.jpg) no-repeat top left/cover;
+    .inner-container {
+      margin: 0 -50px;
+      height: 100%;
+      background: @pxl-color-background url(../images/background_image_farbig.jpg) no-repeat top left/cover;
+    }
   }
 
   .main-container.container {

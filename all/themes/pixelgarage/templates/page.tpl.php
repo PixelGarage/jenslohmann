@@ -133,10 +133,10 @@
 </header>
 
 <div class="main-container <?php print $container_class; ?>">
-  <?php if (!$is_front): ?>
-    <div class="fading fading-top"></div>
-    <div class="fading fading-bottom"></div>
-    <div class="inner-container">
+  <div class="fading fading-top"></div>
+  <div class="fading fading-bottom"></div>
+  <div class="inner-container">
+    <?php if (!$is_front): ?>
       <header role="banner" id="page-header">
         <?php if (!empty($site_slogan)): ?>
           <p class="lead"><?php print $site_slogan; ?></p>
@@ -192,8 +192,8 @@
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
       </div>
-    </div>
-  <?php endif; ?>
+    <?php endif; ?>
+  </div>
 </div>
 
 <?php if (!empty($page['footer'])): ?>

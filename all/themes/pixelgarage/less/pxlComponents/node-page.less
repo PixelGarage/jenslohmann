@@ -6,6 +6,7 @@
 // -------------------------
 @paragraph-max-width: 1000px;
 @paragraph-margin-bottom: 20px;
+@page-margin-top: 0px;
 
 
 // Mixins
@@ -44,7 +45,7 @@
 // General settings
 // -------------------------
 .node.node-page.view-mode-full {
-  margin: 30px 0 70px;
+  margin: @page-margin-top 0 70px;
 
   >.row {
     >div.col-sm-12 {

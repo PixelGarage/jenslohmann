@@ -19,7 +19,7 @@
   >.row {
     >div.col-sm-4 {
       display: block;
-      padding-top: 20px;
+      padding-top: 15px;
       width: 100%;
 
       @media @narrow {
@@ -46,7 +46,7 @@
 
     >div.col-sm-8 {
       display: block;
-      padding-top: 20px;
+      padding-top: 15px;
       width: 100%;
 
       @media @narrow {
@@ -58,9 +58,10 @@
 
       >.field-name-title {
         h2 {
-          margin: 0 0 10px;
+          margin: 0;
           font-family: @pxl-text-font;
-          #pxl-mixins.font-size-responsive(@resp-title-size-max, @resp-title-size-min);
+          font-weight: 700;
+          #pxl-mixins.font-size-responsive();
           text-transform: uppercase;
           letter-spacing: 0.02em;
           line-height: 1.2;
@@ -70,18 +71,22 @@
 
       >.field-name-field-subtitle {
         .field-item {
-          margin: 10px 0;
           font-family: @pxl-text-font;
           font-size: @resp-font-size-max;
+          font-style: italic;
           letter-spacing: 0.02em;
-          line-height: 1;
+          line-height: 1.2;
           color: @text-color;
         }
       }
 
       >.field-name-field-artist {
+        margin: 8px 0 0;
+        line-height: 1.2;
+
         .field-label {
-          display: inline-block;
+          display: none;
+          vertical-align: top;
           font-family: @pxl-text-font;
           font-weight: 700;
           font-size: @resp-font-size-max;
@@ -89,15 +94,19 @@
 
         .field-items {
           display: inline-block;
+          vertical-align: top;
 
           .field-item {
             font-family: @pxl-text-font;
             font-size: @resp-font-size-max;
+            white-space: normal;
           }
         }
       }
 
       >.field-name-field-publisher {
+        line-height: 1.2;
+
         .field-label {
           display: inline-block;
           font-family: @pxl-text-font;
@@ -116,6 +125,8 @@
       }
 
       >.field-name-field-published {
+        line-height: 1.2;
+
         .field-label {
           display: inline-block;
           font-family: @pxl-text-font;
