@@ -8,12 +8,12 @@
 //text
 @pxl-login-btn-color: #fff;
 @pxl-login-btn-hover-color: #fff;
-@pxl-login-link-color: #2698f2;
+@pxl-login-link-color: #000;
 @pxl-login-link-hover-color: @pxl-login-link-color;
 //gradients
-@pxl-login-gradient-top: #2698f2;
+@pxl-login-gradient-top: #808080;
 @pxl-login-gradient-bottom: darken(@pxl-login-gradient-top, 20%);
-@pxl-login-gradient-2-top: #a70014;
+@pxl-login-gradient-2-top: #808080;
 @pxl-login-gradient-2-bottom: darken(@pxl-login-gradient-2-top, 20%);
 
 
@@ -23,7 +23,7 @@
   &:extend(.btn-lg);
   border: none;
   color: @pxl-login-btn-color;
-  #pxl-mixins.border-radius(0.25em);
+  #pxl-mixins.border-radius(0);
   #gradient.vertical(@pxl-login-gradient-2-top, @pxl-login-gradient-2-bottom);
 
   &:hover {
@@ -86,6 +86,7 @@ form#user-login {
 #user_login_form {
   display: inline-block;
   vertical-align: top;
+  margin: 20px 0 50px;
   padding: 0 0 2em;
   width: 100%;
   border: 0;
@@ -96,6 +97,23 @@ form#user-login {
     width: 50%;
     border: 0;
     border-right: 1px solid @hr-border;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-family: @pxl-text-font;
+    font-size: 18px;
+    line-height: 1.2;
+    border: 1px solid @pxl-color-border;
+    #pxl-mixins.border-radius(0);
+    #pxl-mixins.box-shadow(0 1px 1px rgba(0,0,0, 0.075) inset);
+
+    &:focus {
+      #pxl-mixins.box-shadow(0 0 10px rgba(0,0,0, 0.4));
+    }
   }
 
   .form-actions-wrapper {
