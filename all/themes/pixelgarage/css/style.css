@@ -14359,8 +14359,8 @@ body {
 }
 body.front .main-container.container .inner-container {
   margin: 0;
-  height: 100%;
-  background: #f3f4e5 url(../images/background_image_farbig.jpg) no-repeat top left / cover;
+  height: 90%;
+  background: #f3f4e5 url(../images/background_image_farbig.png) no-repeat top left / cover;
 }
 body .main-container.container {
   height: 100%;
