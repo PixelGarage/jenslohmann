@@ -12,6 +12,8 @@
   //
   // Bootstrap modal
   .modal() {
+    background-color: rgba(255,255,255,1.0);
+
     &.modal-fixed-height {
       // full size modal on small screen, body is scrolling
       height: 100%;
@@ -51,19 +53,6 @@
             overflow-y: auto;
           }
         }
-      }
-    }
-
-    .modal-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #000;
-
-      &.in {
-        opacity: 0.8;
       }
     }
 
@@ -129,10 +118,10 @@
 
         .modal-body {
           // content styled separately
-          padding: 20px 15px;
+          padding: 20px 15px 30px;
 
           @media @narrow {
-            padding: 20px 30px;
+            padding: 20px 30px 50px;
           }
         }
 

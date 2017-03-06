@@ -13,24 +13,26 @@
 // Component
 // -------------------------
 .entity-paragraphs-item.paragraphs-item-text-paragraph {
-  .content {
-    padding-top: 20px;
+  .row {
+    .col-sm-12 {
+      padding-top: 20px;
 
-    .field-name-field-title {
-      .field-item {
-        .paragraph-title();
-      }
-    }
-
-    .field-name-field-text {
-      .field-item {
-        #pxl-mixins.wysiwyg-body(@resp-font-size-max, @resp-font-size-min);
-
-        @media @tablet {
-          .content-columns(2);
+      .field-name-field-title {
+        .field-item {
+          #pxl-mixins.title();
         }
-        @media @normal {
-          .content-columns(3);
+      }
+
+      .field-name-field-text {
+        .field-item {
+          #pxl-mixins.wysiwyg-body();
+
+          @media @tablet {
+            .content-columns(2);
+          }
+          @media @normal {
+            .content-columns(3);
+          }
         }
       }
     }

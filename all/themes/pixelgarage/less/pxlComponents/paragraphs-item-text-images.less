@@ -26,13 +26,13 @@
 
       .field-name-field-title {
         .field-item {
-          .paragraph-title();
+          #pxl-mixins.title();
         }
       }
 
       .field-name-field-text {
         .field-item {
-          #pxl-mixins.wysiwyg-body(@resp-font-size-max, @resp-font-size-min);
+          #pxl-mixins.wysiwyg-body();
 
           @media @normal {
             .content-columns(2);
